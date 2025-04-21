@@ -34,4 +34,4 @@ jobs:
 
       - name: Update Kubernetes deployment with new image
         run: |
-          kubectl set image deployment/nestjs-deployment main-service=${{ secrets.DOCKER_USERNAME }}/main-service:${{ env.IMAGE_TAG }}
+          kubectl set image deployment/nestjs-deployment nestjs=${{ secrets.DOCKER_USERNAME }}/main-service:${{ env.IMAGE_TAG }}
