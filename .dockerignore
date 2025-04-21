@@ -1,0 +1,32 @@
+# Ignore node_modules (should be installed in the Docker container)
+node_modules/
+
+# Ignore all files related to Git
+.git/
+.gitignore
+
+# Ignore Docker-related files (Dockerfile, build artifacts, etc.)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Ignore IDE/editor configurations (e.g., VSCode, JetBrains, etc.)
+.vscode/
+.idea/
+
+# Ignore log files and temporary files
+*.log
+*.tmp
+*.bak
+
+# Ignore environment-specific files (e.g., .env files)
+*.env
+
+# Ignore build artifacts
+/dist/
+build/
+coverage/
+
+# Ignore OS-specific files (e.g., Mac OS Finder, Windows thumbs.db, etc.)
+.DS_Store
+Thumbs.db
