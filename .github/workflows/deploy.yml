@@ -32,7 +32,6 @@ jobs:
           mkdir -p $HOME/.kube
           echo "${{ secrets.KUBE_CONFIG_DATA }}" | base64 -d > $HOME/.kube/config
 
-      - name: Deploy to Kubernetes
+      - name: Update Kubernetes deployment with new image
         run: |
-          kubectl apply -f deployment.yaml
-          kubectl apply -f service.yaml
+          kubectl set image deployment/nestjs-deployment nestjs-app=${{ secrets.DOCKER_USERNAME }}/nestjs-app:${{ env.IMAGE_TAG }}
