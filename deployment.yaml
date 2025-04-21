@@ -15,5 +15,6 @@ spec:
       containers:
         - name: nestjs
           image: buruhsd/main-service
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000
